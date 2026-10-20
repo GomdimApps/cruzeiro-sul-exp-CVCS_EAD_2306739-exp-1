@@ -30,7 +30,8 @@ inicio
    leia(atual3)
 
    se anterior1 <= 0 entao
-      escreval(nome1, ": preço anterior inválido")
+      variacao1 <- 0
+      situacao1 <- "INVÁLIDO"
    senao
       variacao1 <- (atual1 - anterior1) / anterior1 * 100
       se variacao1 > 0 entao
@@ -42,11 +43,11 @@ inicio
             situacao1 <- "ESTÁVEL"
          fimse
       fimse
-      escreval(nome1, ": ", situacao1, " (", variacao1, "%)")
    fimse
 
    se anterior2 <= 0 entao
-      escreval(nome2, ": preço anterior inválido")
+      variacao2 <- 0
+      situacao2 <- "INVÁLIDO"
    senao
       variacao2 <- (atual2 - anterior2) / anterior2 * 100
       se variacao2 > 0 entao
@@ -58,11 +59,11 @@ inicio
             situacao2 <- "ESTÁVEL"
          fimse
       fimse
-      escreval(nome2, ": ", situacao2, " (", variacao2, "%)")
    fimse
 
    se anterior3 <= 0 entao
-      escreval(nome3, ": preço anterior inválido")
+      variacao3 <- 0
+      situacao3 <- "INVÁLIDO"
    senao
       variacao3 <- (atual3 - anterior3) / anterior3 * 100
       se variacao3 > 0 entao
@@ -74,6 +75,26 @@ inicio
             situacao3 <- "ESTÁVEL"
          fimse
       fimse
-      escreval(nome3, ": ", situacao3, " (", variacao3, "%)")
    fimse
+
+   escreval("--- Resultados ---")
+   escreval("Produto: ", nome1)
+   escreval("Preço anterior: R$ ", anterior1)
+   escreval("Preço atual: R$ ", atual1)
+   escreval("Variação: ", variacao1, "%")
+   escreval("Situação: ", situacao1)
+
+   escreval("")
+   escreval("Produto: ", nome2)
+   escreval("Preço anterior: R$ ", anterior2)
+   escreval("Preço atual: R$ ", atual2)
+   escreval("Variação: ", variacao2, "%")
+   escreval("Situação: ", situacao2)
+
+   escreval("")
+   escreval("Produto: ", nome3)
+   escreval("Preço anterior: R$ ", anterior3)
+   escreval("Preço atual: R$ ", atual3)
+   escreval("Variação: ", variacao3, "%")
+   escreval("Situação: ", situacao3)
 fimalgoritmo
