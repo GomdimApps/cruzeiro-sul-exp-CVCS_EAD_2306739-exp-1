@@ -1,0 +1,78 @@
+algoritmo "CestaBasica"
+
+var
+   nome1, nome2, nome3: caractere
+   anterior1, anterior2, anterior3: real
+   atual1, atual2, atual3: real
+   variacao1, variacao2, variacao3: real
+
+inicio
+   escreva("Produto 1: ")
+   leia(nome1)
+   escreva("Preço mês anterior: ")
+   leia(anterior1)
+   escreva("Preço mês atual: ")
+   leia(atual1)
+
+   escreva("Produto 2: ")
+   leia(nome2)
+   escreva("Preço mês anterior: ")
+   leia(anterior2)
+   escreva("Preço mês atual: ")
+   leia(atual2)
+
+   escreva("Produto 3: ")
+   leia(nome3)
+   escreva("Preço mês anterior: ")
+   leia(anterior3)
+   escreva("Preço mês atual: ")
+   leia(atual3)
+
+   escreval(nome1)
+   se anterior1 <= 0 entao
+      escreval("Preço anterior inválido")
+   senao
+      variacao1 <- (atual1 - anterior1) / anterior1 * 100
+      se variacao1 > 0 entao
+         escreval("Aumento de ", variacao1, "%")
+      senao
+         se variacao1 < 0 entao
+            escreval("Redução de ", -variacao1, "%")
+         senao
+            escreval("Preço mantido")
+         fimse
+      fimse
+   fimse
+
+   escreval(nome2)
+   se anterior2 <= 0 entao
+      escreval("Preço anterior inválido")
+   senao
+      variacao2 <- (atual2 - anterior2) / anterior2 * 100
+      se variacao2 > 0 entao
+         escreval("Aumento de ", variacao2, "%")
+      senao
+         se variacao2 < 0 entao
+            escreval("Redução de ", -variacao2, "%")
+         senao
+            escreval("Preço mantido")
+         fimse
+      fimse
+   fimse
+
+   escreval(nome3)
+   se anterior3 <= 0 entao
+      escreval("Preço anterior inválido")
+   senao
+      variacao3 <- (atual3 - anterior3) / anterior3 * 100
+      se variacao3 > 0 entao
+         escreval("Aumento de ", variacao3, "%")
+      senao
+         se variacao3 < 0 entao
+            escreval("Redução de ", -variacao3, "%")
+         senao
+            escreval("Preço mantido")
+         fimse
+      fimse
+   fimse
+fimalgoritmo
