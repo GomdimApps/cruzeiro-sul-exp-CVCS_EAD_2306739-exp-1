@@ -23,5 +23,6 @@ Pseudocódigo que lê nome, preço anterior e preço atual de 3 produtos e infor
 | anterior1, anterior2, anterior3 | real |
 | atual1, atual2, atual3 | real |
 | variacao1, variacao2, variacao3 | real |
+| situacao1, situacao2, situacao3 | caractere |
 
 Preços e variação são `real` por serem valores monetários/fracionários.

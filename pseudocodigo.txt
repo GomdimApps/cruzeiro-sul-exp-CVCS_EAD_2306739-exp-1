@@ -2,6 +2,7 @@ algoritmo "CestaBasica"
 
 var
    nome1, nome2, nome3: caractere
+   situacao1, situacao2, situacao3: caractere
    anterior1, anterior2, anterior3: real
    atual1, atual2, atual3: real
    variacao1, variacao2, variacao3: real
@@ -28,51 +29,51 @@ inicio
    escreva("Preço mês atual: ")
    leia(atual3)
 
-   escreval(nome1)
    se anterior1 <= 0 entao
-      escreval("Preço anterior inválido")
+      escreval(nome1, ": preço anterior inválido")
    senao
       variacao1 <- (atual1 - anterior1) / anterior1 * 100
       se variacao1 > 0 entao
-         escreval("Aumento de ", variacao1, "%")
+         situacao1 <- "Aumento"
       senao
          se variacao1 < 0 entao
-            escreval("Redução de ", -variacao1, "%")
+            situacao1 <- "Redução"
          senao
-            escreval("Preço mantido")
+            situacao1 <- "Mantido"
          fimse
       fimse
+      escreval(nome1, ": ", situacao1, " (", variacao1, "%)")
    fimse
 
-   escreval(nome2)
    se anterior2 <= 0 entao
-      escreval("Preço anterior inválido")
+      escreval(nome2, ": preço anterior inválido")
    senao
       variacao2 <- (atual2 - anterior2) / anterior2 * 100
       se variacao2 > 0 entao
-         escreval("Aumento de ", variacao2, "%")
+         situacao2 <- "Aumento"
       senao
          se variacao2 < 0 entao
-            escreval("Redução de ", -variacao2, "%")
+            situacao2 <- "Redução"
          senao
-            escreval("Preço mantido")
+            situacao2 <- "Mantido"
          fimse
       fimse
+      escreval(nome2, ": ", situacao2, " (", variacao2, "%)")
    fimse
 
-   escreval(nome3)
    se anterior3 <= 0 entao
-      escreval("Preço anterior inválido")
+      escreval(nome3, ": preço anterior inválido")
    senao
       variacao3 <- (atual3 - anterior3) / anterior3 * 100
       se variacao3 > 0 entao
-         escreval("Aumento de ", variacao3, "%")
+         situacao3 <- "Aumento"
       senao
          se variacao3 < 0 entao
-            escreval("Redução de ", -variacao3, "%")
+            situacao3 <- "Redução"
          senao
-            escreval("Preço mantido")
+            situacao3 <- "Mantido"
          fimse
       fimse
+      escreval(nome3, ": ", situacao3, " (", variacao3, "%)")
    fimse
 fimalgoritmo
