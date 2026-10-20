@@ -34,12 +34,12 @@ inicio
    senao
       variacao1 <- (atual1 - anterior1) / anterior1 * 100
       se variacao1 > 0 entao
-         situacao1 <- "Aumento"
+         situacao1 <- "AUMENTO"
       senao
          se variacao1 < 0 entao
-            situacao1 <- "Redução"
+            situacao1 <- "QUEDA"
          senao
-            situacao1 <- "Mantido"
+            situacao1 <- "ESTÁVEL"
          fimse
       fimse
       escreval(nome1, ": ", situacao1, " (", variacao1, "%)")
@@ -50,12 +50,12 @@ inicio
    senao
       variacao2 <- (atual2 - anterior2) / anterior2 * 100
       se variacao2 > 0 entao
-         situacao2 <- "Aumento"
+         situacao2 <- "AUMENTO"
       senao
          se variacao2 < 0 entao
-            situacao2 <- "Redução"
+            situacao2 <- "QUEDA"
          senao
-            situacao2 <- "Mantido"
+            situacao2 <- "ESTÁVEL"
          fimse
       fimse
       escreval(nome2, ": ", situacao2, " (", variacao2, "%)")
@@ -66,12 +66,12 @@ inicio
    senao
       variacao3 <- (atual3 - anterior3) / anterior3 * 100
       se variacao3 > 0 entao
-         situacao3 <- "Aumento"
+         situacao3 <- "AUMENTO"
       senao
          se variacao3 < 0 entao
-            situacao3 <- "Redução"
+            situacao3 <- "QUEDA"
          senao
-            situacao3 <- "Mantido"
+            situacao3 <- "ESTÁVEL"
          fimse
       fimse
       escreval(nome3, ": ", situacao3, " (", variacao3, "%)")
